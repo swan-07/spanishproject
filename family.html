@@ -1,0 +1,194 @@
+<!-- me.html -->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+    <title>Mi familia</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    <h1>La historia de mi familia</h1>
+
+    <div class="box">
+        <div class="spinner">
+            <span id="output"></span>
+            <div class="progress">
+                <span id="meter"></span>
+            </div>
+            <div class="btn plus" onclick="plus()">+</div>
+            <div class="btn minus" onclick="minus()">-</div>
+        </div>
+    </div>
+
+    <p> Migración impactó mi familia por los trayendo alrededor del mundo. Antes, a todos personas en mi familia vivía en 
+        China. Cómo China modernizado y abrió al mundo ellos encontraron gente de otros países, y 
+        mis padres tienen motivados a inmigrar a los Estados Unidos por universidad, cual trayendo alrededor del mundo
+        entonces personas en mi familia pueden viajar a China o los EEUU más fácilmente y pueden visitar familia en otros países.
+        Tambíen, abrió la oportunidad por otros personas en mu familia viajar a otros países porque saben que la posibilidad es ahí.
+
+
+
+    </p>
+
+    <div class="content">
+        <a href="index.html" class="return-button1">← Return</a>
+    </div>
+
+
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900wght&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    display: none;
+}
+
+.return-button1 {
+    position: absolute;
+    bottom: 0;
+    background-color: #B8BEDD; /* pastel blue */
+    color: #6D6875; /* pastel purple */
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    font-size: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.return-button1:hover {
+    background-color: #A8AEDD; /* slightly brighter pastel blue */
+}
+
+.box {
+    position:absolute;
+    width: 80px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    border-radius: 50px;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+}
+
+.spinner {
+    position: relative;
+    width: 40px;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+}
+
+.progress {
+    position: relative;
+    width: 10px;
+    background: #222;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.progress #meter {
+    position: absolute;
+    width: 100%;
+    background: #0f0;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0);
+    transition: 0.5s;
+}
+
+.btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #444;
+    font-size: 1.5em;
+    color: #fff;
+    border-radius: 50%;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:active{
+    font-size: 1.25em;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+#output {
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 0 0 5px #fff;
+}
+
+
+
+
+</style>
+
+<script>
+
+    let x = 10;
+let output = document.getElementById('output');
+let meter = document.getElementById('meter');
+output.innerHTML=x;
+
+function plus() {
+    if (x <= 0){
+        document.querySelector('p').style.display = 'block';
+        document.querySelector('.box').style.display = 'none';
+        return false;
+    }
+    if (x <= 3){
+   meter.style.background = "#f00"
+   meter.style.filter = "drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)"
+    }
+  output.innerHTML= --x;
+  meter.style.height = 100-(x*10)+'%' ;
+}
+
+function minus() {
+    if (x >= 10){
+        return false;
+    }
+    if (x >= 3){
+        meter.style.background = "#0f0"
+        meter.style.filter = "drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0)"
+         }
+  output.innerHTML= ++x;
+  meter.style.height = 100-(x*10)+'%' ;
+}
+</script>

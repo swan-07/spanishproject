@@ -1,0 +1,80 @@
+/* styles.css */
+body {
+    background-color: #FFD1DC; /* pastel pink */
+    font-family: 'Pangolin', sans-serif; /* replace 'CrayonFont' with your actual font name */
+}
+
+.image-item img {
+    border-radius: 20px; /* Adjust as needed */
+}
+
+h1 {
+    text-align: center;
+    color: #6D6875; /* pastel purple */
+}
+
+.image-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.image-panel img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    color: black;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+h2:hover {
+    color: #FFAA55; /* Change to the color you want on hover */
+    transform: scale(1.2); /* Makes the text 20% larger */
+}
+
+h2:active {
+    color: #FFEE33; /* Change to the color you want when clicked */
+}
+
+/* styles.css */
+.return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B8BEDD; /* pastel blue */
+    color: #6D6875; /* pastel purple */
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Pangolin', sans-serif; 
+    margin-top: 20px;
+    font-size: 1em;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.return-button:hover {
+    background-color: #A8AEDD; /* slightly brighter pastel blue */
+    transform: scale(1.1); /* Makes the button 20% larger */
+}
+
+.return-button:active {
+    background-color: #989EDD; /* even brighter pastel blue */
+}
+
+p {
+    margin-left: 30px;
+
+}
