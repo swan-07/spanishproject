@@ -17,8 +17,8 @@
             <div class="progress">
                 <span id="meter"></span>
             </div>
-            <div class="btn plus" onclick="plus()">+</div>
             <div class="btn minus" onclick="minus()">-</div>
+            <div class="btn plus" onclick="plus()">+</div>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         entonces personas en mi familia pueden viajar a China o los EEUU más fácilmente y pueden visitar familia en otros países.
         Tambíen, abrió la oportunidad por otros personas en mu familia viajar a otros países porque saben que la posibilidad es ahí.
 
-
+        En clase, nosotros aprendíamos sobre la Cruza Roja que ayudó muchos migrantes y refugios con comida, alojamiento, y trabajos. Cuando mis padres llegó a los Estados Unidos, ellos similarmente pidieron ayuda de grupos de la comunidad, como iglesias.
 
     </p>
 
@@ -166,7 +166,7 @@ let output = document.getElementById('output');
 let meter = document.getElementById('meter');
 output.innerHTML=x;
 
-function plus() {
+function minus() {
     if (x <= 0){
         document.querySelector('p').style.display = 'block';
         document.querySelector('.box').style.display = 'none';
@@ -180,7 +180,7 @@ function plus() {
   meter.style.height = 100-(x*10)+'%' ;
 }
 
-function minus() {
+function plus() {
     if (x >= 10){
         return false;
     }
